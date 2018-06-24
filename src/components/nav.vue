@@ -1,21 +1,22 @@
 <template>
-    <nav class="light-blue darken-4">
-    <div class="nav-wrapper">
-           <a href="#!" class="brand-logo left-align">German Gamboa</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <router-link tag="li" to="/"><a>Home</a></router-link>
-        <router-link tag="li" to="/blog"><a>Blog</a></router-link>
-        <router-link tag="li" to="/resume"><a>Resume</a></router-link>
-      </ul>
+    <div>
+        <nav class="light-blue darken-4">
+            <div class="nav-wrapper">
+                <a class="brand-logo">German</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <router-link tag="li" to="/"><a>Home</a></router-link>
+                    <router-link tag="li" to="/blog"><a>Blog</a></router-link>
+                    <router-link tag="li" to="/resume"><a>Resume</a></router-link>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <router-link tag="li" to="/"><a>Home</a></router-link>
+            <router-link tag="li" to="/blog"><a>Blog</a></router-link>
+            <router-link tag="li" to="/resume"><a>Resume</a></router-link>
+        </ul>
     </div>
-    <ul class="sidenav" id="mobile-demo">
-        <router-link tag="li" to="/"><a>Home</a></router-link>
-        <router-link tag="li" to="/blog"><a>Blog</a></router-link>
-        <router-link tag="li" to="/resume"><a>Resume</a></router-link>
-  </ul>
-  </nav>
-
 </template>
 
 <script>
@@ -29,7 +30,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .brand-logo {
-        margin: 0  2em;
+        margin: 0  1em;
         display: block;
 
     }
@@ -46,7 +47,7 @@ export default {
         content: '';
         width: 100%;
         height: 2px;
-        background-color: #f44336;
+        background-color: #fff;
         position: absolute;
         left: 0;
         bottom: 0;

@@ -1,67 +1,129 @@
 <template>
-    <main>
-        <section class="hero">
-            <div class="hero-img"></div>
-            <div class="wrapper">
-            <div class="hero-content">
-                <h3>German Gamboa</h3>
-                <h5>{{tagline}}</h5>
+    <div class="home-container">
+        <div class="row">
+            <div class="btn-wrapper col s12 m6 ">
+            <button class="content-btn  waves-effect waves-light" v-on:click="openContainer('Projects')"></button>
+                <span>Projects</span>
             </div>
+            <div class="btn-wrapper col s12 m6">
+            <button class="content-btn  waves-effect waves-light" v-on:click="openContainer('Bio')"></button>
+                <span>Contact Me</span>
             </div>
-        </section>
-        <div class="container">
         </div>
-    </main>
+        <transition name="component-fade" mode="out-in">
+            <div class="main-content">
+                <transition name="component-fade" mode="out-in">
+                    <div :is="currentComponent" @close="closeContainer" ></div>
+                </transition>
+            </div>
+        </transition>
+    </div>
 </template>
 
 <script>
+import projects from '../components/projects'
+import bio from '../components/bio'
+import intro from '../components/intro'
 export default {
   name: 'HomePage',
+  components: {
+    Projects: projects,
+    Bio: bio,
+    Intro: intro
+
+  },
   data () {
     return {
-      tagline: 'Web Developer'
+      tagline: 'Web Developer',
+      currentComponent: 'Intro'
     }
   },
   methods: {
-
-  },
-  mounted () {
-    setInterval(() => {
-      this.tagline = (this.tagline === 'Web Developer') ? 'Coffee Drinker' : 'Web Developer'
-    }, 5000)
+    openContainer (component) {
+      this.currentComponent = component
+    },
+    closeContainer () {
+      this.currentComponent = 'Intro'
+    }
   }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hero {
+.home-container {
+    min-height: 88vh;
+}
+.main-content{
+    height: 100%;
+    min-height: 88vh;
+}
+.row {
+    height: 2em;
+    margin: 0;
+}
+.btn-wrapper {
     position: relative;
-    height: 50vh;
+    display: inline-block;
+    width: 110%;
+    height: 110%;
+    padding: 0;
 }
-.wrapper {
-    display: flex;
-    justify-content: center;
-}
-.hero-img {
-    width: 100%;
-    height: 50vh;
-    background-image: url('https://images.unsplash.com/photo-1485119584289-30ca2b38c67e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3c395832fbacd178701646c494b1278c&auto=format&fit=crop&w=1950&q=80');
-    background-size: cover;
-    background-position: center;
+.btn-wrapper > span {
     position: absolute;
-    background-attachment: fixed;
-    opacity: 1;
-    filter: brightness(.40)
-}
-.hero-content {
-    padding: 5em 0 ;
-    display: block;
-    position: absolute;
-    opacity: 1;
-    align-content: center;
     color: #fff;
-    margin: auto;
+    z-index: 1;
+    top: 20%;
+    left: 41%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1em;
+}
+.content-btn {
+    width: 100%;
+    height: 110%;
+    background-color: #607d8b;
+    color: #fff;
+    border-radius: 0;
+    padding: 0;
+    border: none;
+}
 
+.content-btn:hover {
+    transform: scaleY(1.5);
+    transform-origin:top;
+}
+
+.component-fade-enter-active {
+  animation: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.component-fade-leave-active {
+    animation: fadeInUp reverse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media screen and (max-width: 600px){
+.main-content{
+    margin-top: 2.6em;
+}
 }
 
 </style>
