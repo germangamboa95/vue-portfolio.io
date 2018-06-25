@@ -8,7 +8,7 @@ import Resume from '@/containers/resume'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',

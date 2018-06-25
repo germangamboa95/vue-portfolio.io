@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="container"></div>
+        <div class="container">
             <div class="row card">
                 <div style="height:2em;"><i @click="$emit('close')" class="material-icons right close-btn">close</i></div>
                 <h4 class="center">Get In Contact</h4>
