@@ -49,7 +49,7 @@ module.exports = {
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: './vue-portfolio/static',
+    assetsSubDirectory: 'static',
     assetsPublicPath: './vue-portfolio.io',
 
     /**
