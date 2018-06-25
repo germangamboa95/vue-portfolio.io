@@ -3,11 +3,11 @@
         <div class="row">
             <div class="btn-wrapper col s12 m6 ">
             <button class="content-btn  waves-effect waves-light" v-on:click="openContainer('Projects')"></button>
-                <span>Projects</span>
+                <span v-on:click="openContainer('Projects')">Projects</span>
             </div>
             <div class="btn-wrapper col s12 m6">
             <button class="content-btn  waves-effect waves-light" v-on:click="openContainer('Bio')"></button>
-                <span>Contact Me</span>
+                <span v-on:click="openContainer('Bio')">Contact Me</span>
             </div>
         </div>
         <transition name="component-fade" mode="out-in">
