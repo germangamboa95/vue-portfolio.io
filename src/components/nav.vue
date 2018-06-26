@@ -13,7 +13,7 @@
         </nav>
         <ul class="sidenav" id="mobile-demo">
             <router-link tag="li" to="/"><a>Home</a></router-link>
-            <router-link tag="li" to="/blog"><a>Blog</a></router-link>
+            <!-- <router-link tag="li" to="/blog"><a>Blog</a></router-link> -->
             <router-link tag="li" to="/resume"><a>Resume</a></router-link>
         </ul>
     </div>
