@@ -2,9 +2,9 @@
   <vue-markdown class="resume" typographer toc-anchor-link-space>
 ## Profile
 
-React focused Web Developer with a passion for creating software that solves an organization's complex problems while producing clean maintainable code. Relentless problem solver with a drive to learn each and every day.
+Web Developer with a passion for creating software that solves an organization's complex problems while producing clean maintainable code. Relentless problem solver with a drive to learn each and every day.
 
-**Skills**
+## Skills
 
 **Core Languages:** JavaScript(ES6), PHP, HTML, CSS, Python.
 
@@ -16,7 +16,7 @@ React focused Web Developer with a passion for creating software that solves an 
 
 ##### Eventler:
 
-[Visit the app!](**https://eventler.app**)
+[Visit the app!](https://eventler.app)
 
 **Summary:** Event management application that helps non profits increase event attendance by easing the  registration process for their guests with an innovative registration system.
 

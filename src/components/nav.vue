@@ -1,12 +1,12 @@
 <template>
     <div>
-        <nav class="light-blue darken-4">
+        <nav>
             <div class="nav-wrapper">
-                <a class="brand-logo">German</a>
+                <a class="brand-logo"><img class="responsive-img" src="../assets/logoOnly.png" alt=""></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <router-link tag="li" to="/"><a>Home</a></router-link>
-                    <router-link tag="li" to="/blog"><a>Blog</a></router-link>
+                    <!-- <router-link tag="li" to="/projects"><a>Projects</a></router-link> -->
                     <router-link tag="li" to="/resume"><a>Resume</a></router-link>
                 </ul>
             </div>
@@ -29,13 +29,18 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    nav {
+        background-color: #253644;
+    }
     .brand-logo {
         margin: 0  1em;
         display: block;
+        padding: .1em;
+        width: 2em;
 
     }
     .router-link-exact-active {
-        background-color: #01579b;
+        background-color: #253644;
     }
 
     li{
@@ -54,7 +59,7 @@ export default {
     }
 
     li:hover {
-        background-color: #01579b;
+        background-color: #253644;
         color: rgba(255, 255, 255, .9);
     }
     a:hover{

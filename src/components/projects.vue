@@ -1,8 +1,7 @@
 <template>
     <section>
         <div class="container">
-            <div class="row close-btn-row"><i @click="$emit('close')" class="material-icons right close-btn">close</i></div>
-
+            <h3>Featured Projects</h3>
             <div class="row">
                 <div class="col s12 m6">
                 <div class="card hoverable">
@@ -24,7 +23,7 @@
                 <div class="card hoverable">
                     <div class="card-image">
                     <img class="responsive-image"  src="../assets/letsDoLunchImg.png">
-                    <span class="card-title black-text">LetsDoLunch</span>
+                    <span class="card-title">LetsDoLunch</span>
                     </div>
                     <div class="card-content">
                     <p><strong>Summary:</strong> Eliminate the age old question of where to eat! Simple restaurant voting app.</p>
@@ -40,7 +39,7 @@
                 <div class="card hoverable">
                     <div class="card-image">
                     <img class="responsive-image"  src="../assets/wooferImg.png">
-                    <span class="card-title black-text">Woofer</span>
+                    <span class="card-title ">Woofer</span>
                     </div>
                     <div class="card-content">
                     <p><strong>Summary:</strong> Share the joy of having a Dog without the responsibility. Its Air BnB for Dogs!</p>
@@ -59,8 +58,8 @@
                     <span class="card-title">Pokemon Battles</span>
                     </div>
                     <div class="card-content">
-                    <p><strong>Summary:</strong> Management. Lets you create, share and manage events. Sends email &amp; text communications</p>
-                    <p><strong>Techs:</strong> ES6, React.js, node.js, express.js, mongoDB, passport.js linux</p>
+                    <p><strong>Summary:</strong> Small Pokemon game made with the pokemon API and jQuery. Can you win or will you be defeated?</p>
+                    <p><strong>Techs:</strong> HTML5, CSS3, bootstrap, jQuery, fetch</p>
                     </div>
                     <div class="card-action">
                         <a class="blue-text" target="_blank" href="https://germangamboa95.github.io/pokemonbattles.io/"><i class="far fa-eye fa-2x"></i></a>
@@ -69,7 +68,10 @@
                 </div>
                 </div>
             </div>
-        </div>
+            </div>
+            <div class="row">
+                <h3></h3>
+            </div>
     </section>
 </template>
 
@@ -83,13 +85,15 @@ export default {
    section {
         background: #fff;
     }
-    
     .row {
         margin: 0;
     }
     .card-title{
         text-transform: uppercase;
         font-weight: 700;
+        background-color: #2c3e50;
+        color: #fff;
+        opacity: .90;
     }
     .card-content {
         text-align: left;
